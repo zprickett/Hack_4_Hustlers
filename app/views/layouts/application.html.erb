@@ -7,21 +7,34 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+	<%= link_to "/Hack4Hustler_Bootstrap.zip", :target => "_BLANK"  do %>
+	<h3>Click Here to Download html Files</h3>
+	<% end %>
+
+<%= link_to "/index_restaurant.html", :target => "_BLANK"  do %>
 <h2>My Restaurant Single Page Frontend Application</h2>
+<% end %>
+
 <p>Below is the code for the Landing page of the application</p>
 	<pre style="background:#eee; padding-left:10px;margin:10px;border-radius:10px;">
 		<% file="#{Rails.root}/public/index_restaurant.html" %>
 		<%= CodeRay.scan_file(file, :html).div.html_safe %>
 	</pre>
 
+<%= link_to "/new_restaurant.html", :target => "_BLANK"  do %>
 <h2>My Restaurant Single Page New Restaurant Application</h2>
+<% end %>
+
 <p>Below is the new/edit restaurant application</p>
 	<pre style="background:#eee; padding-left:10px;margin:10px;border-radius:10px;">
 		<% file="#{Rails.root}/public/new_restaurant.html" %>
 		<%= CodeRay.scan_file(file, :html).div.html_safe %>
 	</pre>
 
+<%= link_to "/single_restaurant.html", :target => "_BLANK"  do %>
 <h2>My Restaurant Single Page Single Page Application</h2>
+<% end %>
+
 <p>Single page view</p>
 	<pre style="background:#eee; padding-left:10px;margin:10px;border-radius:10px;">
 		<% file="#{Rails.root}/public/restaurant_single.html" %>
