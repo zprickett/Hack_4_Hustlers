@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Hack4Hustlers</title>
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+<h2>My Restaurant Single Page Frontend Application</h2>
+<p>Below is the code for the Landing page of the application</p>
+	<pre style="background:#eee; padding-left:10px;margin:10px;border-radius:10px;">
+		<% file="#{Rails.root}/public/index_restaurant.html" %>
+		<%= CodeRay.scan_file(file, :html).div.html_safe %>
+	</pre>
+
+<h2>My Restaurant Single Page New Restaurant Application</h2>
+<p>Below is the new/edit restaurant application</p>
+	<pre style="background:#eee; padding-left:10px;margin:10px;border-radius:10px;">
+		<% file="#{Rails.root}/public/new_restaurant.html" %>
+		<%= CodeRay.scan_file(file, :html).div.html_safe %>
+	</pre>
+
+<h2>My Restaurant Single Page Single Page Application</h2>
+<p>Single page view</p>
+	<pre style="background:#eee; padding-left:10px;margin:10px;border-radius:10px;">
+		<% file="#{Rails.root}/public/restaurant_single.html" %>
+		<%= CodeRay.scan_file(file, :html).div.html_safe %>
+	</pre>
+
+<%= yield %>
+
+</body>
+</html>
